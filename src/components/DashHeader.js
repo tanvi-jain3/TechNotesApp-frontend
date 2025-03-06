@@ -1,7 +1,10 @@
+import React from 'react'
+
 import { Link } from "react-router-dom";
 
 const DashHeader = () =>{
-    
+
+    console.log("DashHeader component rendered");
     const content = (
         <header className="dash-header">
             <div className="dash-header__container">
