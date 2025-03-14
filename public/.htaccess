@@ -1,0 +1,4 @@
+# Force MIME type for JSON
+<FilesMatch "\.json$">
+    ForceType application/json
+</FilesMatch>

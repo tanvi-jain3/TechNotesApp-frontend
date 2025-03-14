@@ -18,7 +18,7 @@
   "bugs": {
     "url": "https://github.com/tanvi-jain3/TechNotesApp-frontend/issues"
   },
-  "homepage": "https://github.com/tanvi-jain3/TechNotesApp-frontend#readme",
+  "homepage": "/",
   "description": "Front End for the TechNotesApp",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.7.2",
