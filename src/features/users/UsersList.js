@@ -1,21 +1,25 @@
 import { useGetUsersQuery } from "./usersApiSlice"
 import User from './User'
 
-const UsersList = () =>{
+const UsersList = () => {
 
-    const{
-        data:users,
+    const {
+        data: users,
         isLoading,
         isSuccess,
         isError,
         error
-    }=useGetUsersQuery()
+    } = useGetUsersQuery(undefined, {
+        pollingInterval: 60000,
+        refetchOnFocus: true,
+        refetchOnMountOrArgChange: true
+    }) //requerying data on change
 
-    let content 
+    let content
 
-    if(isLoading) content = <p>Loading...</p>
+    if (isLoading) content = <p>Loading...</p>
 
-    if(isError) {
+    if (isError) {
         content = <p className="errmsg">{error?.data?.message}</p>
     }
 
@@ -45,5 +49,4 @@ const UsersList = () =>{
 
     return content
 }
-
 export default UsersList
